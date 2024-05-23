@@ -18,13 +18,13 @@ public class Team {
     private Long teamId;
     private String teamName;
 
-//    @JsonIgnore
-//    @OneToMany
-//    private List<User> users;
-//
-//    @JsonIgnore
-//    @OneToMany
-//    private List<Task> tasks;
+    @JsonIgnore
+    @OneToMany
+    private List<User> users;
+
+    @JsonIgnore
+    @OneToMany
+    private List<Task> tasks;
 
 //    @OneToMany(mappedBy = "team")
 //    private List<SubTaskTeam> subTaskTeams = new ArrayList<>();
