@@ -12,7 +12,7 @@ public class SubTaskTeam {
     @Id
     @GeneratedValue
     @Column(name = "team_subtask_id")
-    private Long stId;
+    private Long tsId;
 
     @ManyToOne(fetch = LAZY)
     @JoinColumn(name = "team_id")

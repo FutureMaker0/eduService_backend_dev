@@ -1,6 +1,7 @@
 package jpa.edu.domain;
 
 import jakarta.persistence.*;
+import jpa.edu.domain.user.User;
 import lombok.Data;
 
 import static jakarta.persistence.FetchType.*;

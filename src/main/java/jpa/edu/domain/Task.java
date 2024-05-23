@@ -1,6 +1,7 @@
 package jpa.edu.domain;
 
 import jakarta.persistence.*;
+import jpa.edu.domain.user.User;
 import lombok.Data;
 
 import java.time.LocalDate;
@@ -41,6 +42,6 @@ public class Task {
     private LocalDateTime modifiedAt;
 
     @OneToMany(mappedBy = "task")
-    private List<SubTask> subtasks = new ArrayList<>();
+    private List<SubTask> subTasks = new ArrayList<>();
 
 }

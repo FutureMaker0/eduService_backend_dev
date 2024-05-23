@@ -1,6 +1,9 @@
-package jpa.edu.domain;
+package jpa.edu.domain.user;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+import jpa.edu.domain.SubTask;
+import jpa.edu.domain.Team;
 import lombok.Data;
 
 import java.util.ArrayList;
@@ -11,6 +14,8 @@ import static jakarta.persistence.FetchType.*;
 @Entity
 @Data
 @Table(name = "users")
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "dtype")
 public abstract class User {
 
     @Id
@@ -18,12 +23,14 @@ public abstract class User {
     @Column(name = "user_id")
     private Long userId;
 
-    private String userName;
+    private String username;
     private String pw;
 
+    @JsonIgnore
     @ManyToOne(fetch = LAZY)
     private Team team;
 
+    @JsonIgnore
     @ManyToMany
     @JoinTable(name = "user_subtask",
             joinColumns = @JoinColumn(name = "user_id"),
