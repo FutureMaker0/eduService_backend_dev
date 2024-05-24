@@ -1,5 +1,6 @@
 # eduService_backend_dev
-Spring Data Jpa 기반 에듀 서비스 개발 리포지토리
+  - Spring Data Jpa 기반 에듀 서비스 개발 리포지토리
+  - 협업 관리 시스템 백엔드 RestAPI 개발(교육 플랫폼용으로 기획했으나, 타 사업군으로 확장 가능성을 열어놓고 서비스 기획 및 개발)
 
 ## 기능 목록
   - 회원 기능
