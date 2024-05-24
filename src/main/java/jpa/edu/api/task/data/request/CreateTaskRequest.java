@@ -1,21 +1,22 @@
-package jpa.edu.api.subtask.data.dto;
+package jpa.edu.api.task.data.request;
 
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jpa.edu.domain.Status;
-import jpa.edu.domain.SubTask;
-import jpa.edu.domain.Team;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.RequiredArgsConstructor;
 
 @Data
 @AllArgsConstructor
-public class SubTaskDto {
+public class CreateTaskRequest {
 
+    private String title;
+    private String content;
     private Status isCompleted;
 
-    public SubTaskDto(SubTask subTask) {
-        isCompleted = subTask.getIsCompleted();
+    public CreateTaskRequest() {
+
     }
 
 }
