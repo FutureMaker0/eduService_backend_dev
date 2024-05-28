@@ -42,8 +42,8 @@
       - 완료되지 않은 SubTask에 한해서, SubTask를 맡은 팀들의 수정이 가능해야 한다.
       - 만약 완료된 SubTask가 있다면 요청은 무시되어야 하고 수정되어선 안된다.
 
-
-
+- 개별 회원 조회(id값 활용)
+  - ResponseEntity<User> 는 HTTP 응답을 나타내며, 조회된 사용자가 존재하면 ResponseEntity.ok(user)를 반환하고, 없으면 ResponseEntity.status(HttpStatus.NOT_FOUND).build()를 반환한다.
 
 
 
