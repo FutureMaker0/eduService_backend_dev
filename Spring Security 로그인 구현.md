@@ -15,3 +15,17 @@
   1. 서버에서 클라이언트로 Access Token 만료를 알리는 응답을 보낸다.
   2. 클라이언트는 서버 측으로 Access Token + Refresh Token 재발급을 요청한다.
   3. 서버는 토큰 검증 후 Access Token + Refresh Token을 재발급한다.
+
+### Access Token
+  - 인증된 사용자가 특정 리소스에 접근할 때 사용되는 토큰
+  - 클라이언트는 Access Token을 사용하여 인증된 사용자의 신원을 확인하고, 서비스 또는 리소스에 접근
+  - 유효기간이 지나면 만료(expired)
+  - 만료가 되면, 새로운 Access Token을 얻기 위해 Refresh Token 사용
+
+### Refresh Token
+  - Access Token의 갱신을 위해 사용되는 토큰
+  - 일반적으로 Access Token과 함께 발급
+  - Access Token이 만료되면 Refresh Token을 사용하여 새로운 Access Token 발급
+  - 사용자가 지속적으로 인증 상태를 유지할 수 있도록 해줌 (접근 시마다 새롭게 로그인하지 않아도 되게 함)
+  - Access Token보다는 길지만, 보안 상의 이유로 마찬가지로 유효 기간을 가짐
+    
