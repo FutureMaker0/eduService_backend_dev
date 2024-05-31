@@ -31,7 +31,13 @@
   - Access Token보다는 길지만, 보안 상의 이유로 마찬가지로 유효 기간을 가짐
 
 # 2. 구현
-
-
-
+  1) 라이브러리 설정
+  2) JwtTokenDTO 생성
+  3) 암호 키 설정
+  4) JwtTokenProvider 구현
+  5) JwtAuthenticationFilter 구현
+  6) SecurityConfig 설정
+  7) 인증을 위한 도메인, 리포지토리 레이어 구현
+  8) 인증을 위한 서비스 레이어 구현
+  9) UserDetailsService를 확장하는 서비스 구현(CustomUserDetailsService.java)
 
