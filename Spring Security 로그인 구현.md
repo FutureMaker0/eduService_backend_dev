@@ -32,7 +32,7 @@
 
 # 2. 구현
   1) 라이브러리 설정
-     - Spring Security와 JWT 사용을 위해 라이브러리를 추가한다(build.gradle)
+     - Spring Security와 JWT 사용을 위해 라이브러리를 추가한다.(build.gradle)
   2) JwtTokenDTO 생성
      - 클라이언트에 토큰을 보내기 위한 JwtTokenDto를 생성한다.
   3) 암호 키 설정
