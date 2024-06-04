@@ -35,6 +35,8 @@
      - Spring Security와 JWT 사용을 위해 라이브러리를 추가한다.(build.gradle)
   2) JwtTokenDTO 생성
      - 클라이언트에 토큰을 보내기 위한 JwtTokenDto를 생성한다.
+     - String grantType은 JWT에 대한 인증 타입이다. Bearer 방식을 사용하며, 이 방식은 Access Token을 HTTP 요청의
+       Authrization 헤더에 포함하여 전송한다. ex)Bearer<access_token>
   3) 암호 키 설정
   4) JwtTokenProvider 구현
   5) JwtAuthenticationFilter 구현
