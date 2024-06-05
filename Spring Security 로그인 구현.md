@@ -38,7 +38,7 @@
      - String grantType은 JWT에 대한 인증 타입이다. Bearer 방식을 사용하며, 이 방식은 Access Token을 HTTP 요청의
        Authrization 헤더에 포함하여 전송한다. ex)Bearer<access_token>
   3) 암호 키 설정
-     - openssl rand -hex 32 명령어를 통해 랜덤으로 암호 키를 생성한다.
+     - "openssl rand -hex 32" 명령어를 통해 랜덤으로 암호 키를 생성한다.
      - 생성한 secret key를 application.yml에 등록한다.
      - 해당 키는 토큰의 암/복호화에 사용된다.
      - HS256 알고리즘을 사용하기 위해 32글자 이상으로 설정해준다.(32의 의미)
