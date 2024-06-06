@@ -43,6 +43,8 @@
      - 해당 키는 토큰의 암/복호화에 사용된다.
      - HS256 알고리즘을 사용하기 위해 32글자 이상으로 설정해준다.(32의 의미)
   4) JwtTokenProvider 구현
+     - Spring Security와 JWT 토큰을 사용하여 인증 및 권한 부여를 처리하는 클래스.
+     - JWT Token의 생성, 복호화, 검증 기능 등을 구현할 수 있다.
   5) JwtAuthenticationFilter 구현
   6) SecurityConfig 설정
   7) 인증을 위한 도메인, 리포지토리 레이어 구현
