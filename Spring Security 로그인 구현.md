@@ -46,6 +46,10 @@
      - Spring Security와 JWT 토큰을 사용하여 인증 및 권한 부여를 처리하는 클래스.
      - JWT Token의 생성, 복호화, 검증 기능 등을 구현할 수 있다.
   5) JwtAuthenticationFilter 구현
+     - 클라이언트 요청 시 JWT 인증을 하기 위해 설치하는 Custom Filter
+     - 클라이언트로부터 들어오는 요청에서 JWT 토큰을 처리하고, 유효한 토큰일 경우 해당 토큰의 인증 정보
+       (Authentication)를 SecurityContext에 저장하여 인증된 요청을 처리할 수 있또록 한다.
+     - JWT를 사용하여 username + password 인증을 수행.
   6) SecurityConfig 설정
   7) 인증을 위한 도메인, 리포지토리 레이어 구현
   8) 인증을 위한 서비스 레이어 구현
