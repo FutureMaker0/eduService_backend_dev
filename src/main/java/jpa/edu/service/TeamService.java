@@ -1,6 +1,5 @@
 package jpa.edu.service;
 
-import jpa.edu.api.team.data.dto.TeamDto;
 import jpa.edu.api.user.data.ObjectFormat;
 import jpa.edu.domain.Team;
 import jpa.edu.repository.TeamRepository;

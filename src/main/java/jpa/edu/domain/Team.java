@@ -19,11 +19,11 @@ public class Team {
     private String teamName;
 
     @JsonIgnore
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     private List<User> users;
 
     @JsonIgnore
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Task> tasks;
 
 //    @OneToMany(mappedBy = "team")

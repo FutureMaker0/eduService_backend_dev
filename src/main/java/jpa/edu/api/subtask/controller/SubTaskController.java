@@ -33,14 +33,24 @@ public class SubTaskController {
         return new CreateSubTaskResponse(id);
     }
 
-    @GetMapping("/api/subTasks")
-    public ObjectFormat subTasks() {
+    @GetMapping("/api/v1/subTasks")
+    public ObjectFormat subTasks_v1() {
         List<SubTask> allSubTasks = subTaskService.findAllSubTasks();
         log.info("allSubTasks = {}", allSubTasks);
         List<SubTaskDto> collect = allSubTasks.stream()
                 .map(st -> new SubTaskDto(st))
                 .collect(Collectors.toList());
         log.info("collect = {}", collect);
+
+        return new ObjectFormat(collect);
+    }
+
+    @GetMapping("/api/v2/subTasks")
+    public ObjectFormat subTasks_v2() {
+        List<SubTask> allSubTasks = subTaskService.findAllSubTasks();
+        List<SubTaskDto> collect = allSubTasks.stream()
+                .map(st -> new SubTaskDto(st))
+                .collect(Collectors.toList());
 
         return new ObjectFormat(collect);
     }

@@ -1,7 +1,7 @@
 package jpa.edu.api.team.controller;
 
-import jakarta.validation.Valid;
-import jpa.edu.api.team.data.dto.TeamDto;
+import jpa.edu.api.team.data.dto.TeamDtoV1;
+import jpa.edu.api.team.data.dto.TeamDtoV2;
 import jpa.edu.api.team.data.request.CreateTeamRequest;
 import jpa.edu.api.team.data.response.CreateTeamResponse;
 import jpa.edu.api.user.data.ObjectFormat;
@@ -38,15 +38,24 @@ public class TeamApiController {
         return new CreateTeamResponse(id);
     }
 
-    @GetMapping("/api/teams")
-    public ObjectFormat teams() {
+    @GetMapping("/api/v1/teams")
+    public ObjectFormat teams_v1() {
         List<Team> allTeams = teamService.findAllTeams();
-        List<TeamDto> collect = allTeams.stream()
-                .map(t -> new TeamDto(t))
+        List<TeamDtoV1> collect = allTeams.stream()
+                .map(t -> new TeamDtoV1(t))
                 .collect(Collectors.toList());
 
         return new ObjectFormat(collect);
     }
 
+    @GetMapping("/api/v2/teams")
+    public ObjectFormat teams_v2() {
+        List<Team> allTeams = teamService.findAllTeams();
+        List<TeamDtoV2> collect = allTeams.stream()
+                .map(t -> new TeamDtoV2(t))
+                .collect(Collectors.toList());
+
+        return new ObjectFormat(collect);
+    }
 
 }

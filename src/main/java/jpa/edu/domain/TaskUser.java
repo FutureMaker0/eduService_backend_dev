@@ -16,11 +16,11 @@ public class TaskUser {
     @Column(name = "task_user_id")
     private Long tuId;
 
-    @ManyToOne(fetch = LAZY)
+    @ManyToOne(fetch = LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "task_id")
     private Task task;
 
-    @ManyToOne(fetch = LAZY)
+    @ManyToOne(fetch = LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id")
     private User user;
 

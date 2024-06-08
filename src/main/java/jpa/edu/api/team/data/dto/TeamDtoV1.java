@@ -6,11 +6,11 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class TeamDto {
+public class TeamDtoV1 {
 
     private String teamName;
 
-    public TeamDto(Team team) {
+    public TeamDtoV1(Team team) {
         teamName = team.getTeamName();
     }
 
