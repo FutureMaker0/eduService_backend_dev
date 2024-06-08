@@ -52,6 +52,8 @@
      - JWT를 사용하여 username + password 인증을 수행.
   6) SecurityConfig 설정
   7) 인증을 위한 도메인, 리포지토리 레이어 구현
+     - UserDetails @interface 구현
+     - 인증은 username + password로 진행
   8) 인증을 위한 서비스 레이어 구현
   9) UserDetailsService를 확장하는 서비스 구현(CustomUserDetailsService.java)
 
