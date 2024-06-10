@@ -51,6 +51,7 @@
        (Authentication)를 SecurityContext에 저장하여 인증된 요청을 처리할 수 있또록 한다.
      - JWT를 사용하여 username + password 인증을 수행.
   6) SecurityConfig 설정
+     - Spring Security 설정을 위한 SecurityConfig를 구성한다.
   7) 인증을 위한 도메인, 리포지토리 레이어 구현
      - UserDetails @interface 구현
      - 인증은 username + password로 진행
